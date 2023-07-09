@@ -1,0 +1,60 @@
+<!-- 
+<p style="text-align: center;">User Registration</p>
+
+<form #regForm="ngForm" (ngSubmit)="userRegister(regForm)" >
+    
+    <table align="center"> 
+                        
+        <tr > 
+        <td align="left" >Enter Email :</td> 
+        <td align="left"><input type="text"  name="email"  [(ngModel)]="user.emailid" required> </td>
+        </tr>
+        <br>
+        <tr> 
+            <td align="right"  >Set Password :  </td> 
+            <td align="left"><input type="password"  name="password"  [(ngModel)]="user.password"> </td>
+            </tr>
+            <tr>
+            <td align="right"> Enter Name : </td>
+            <td align="left"><input type="text" name="name" [(ngModel)]="user.name"></td>
+            </tr>
+            <tr>
+                <td align="right">Enter Phone No :</td>
+                <td align="left"><input type="number" name="phone" [(ngModel)]="user.phoneno"></td>
+            </tr>
+            <input type="submit" value="Register" >
+                       
+        </table>
+        <button routerLink="/userlogin" >Back</button>
+    <br>
+    
+</form> -->
+<!-- --------------------------------- -->
+
+
+<form #regForm="ngForm" (ngSubmit)="userRegister(regForm)" >
+    <div class="form">
+    <div class="title">Welcome</div>
+    <div class="subtitle">Let's create your account!</div>
+    <div class="input-container ic1">
+      <input id="firstname" class="input"  placeholder=" " type="text"  name="email"  [(ngModel)]="user.emailid" required />
+      <div class="cut"></div>
+      <label for="firstname" class="placeholder">Email</label>
+    </div>
+    <div class="input-container ic2">
+      <input id="lastname" class="input"  placeholder=" " type="password"  name="password"  [(ngModel)]="user.password" />
+      <div class="cut"></div>
+      <label for="lastname" class="placeholder">Password</label>
+    </div>
+    <div class="input-container ic2">
+      <input id="email" class="input"  placeholder=" " type="text" name="name" [(ngModel)]="user.name"/>
+      <div class="cut cut-short"></div>
+      <label for="email" class="placeholder">User Name</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="phone" class="input" type="number" placeholder=" " name="phone" [(ngModel)]="user.phoneno" />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Phone No.</label>
+      </div>
+    <button type="submit" class="submit">Submit</button>
+</div>

@@ -1,0 +1,46 @@
+<!-- <p style="text-align: center;">Admin Login</p>
+
+<form  (ngSubmit)="adminloginValidate()" >
+    
+    <table align="center"> 
+                        
+        <tr > 
+        <td align="left" class="form-label"> Email :</td> 
+        <td align="left"><input type="text"  name="email"  [(ngModel)]="email" required> </td>
+        </tr>
+        <br>
+        <tr> 
+            <td align="left" class="form-label" > Password :  </td> 
+            <td align="left"><input type="password"  name="password"  [(ngModel)]="password"> </td>
+            </tr>
+            <input type="submit" value="Login" >
+        </table>
+        <button routerLink="/home" >Back</button>
+
+    <br>
+    
+</form> -->
+
+
+<!-- ------------------------------------------------- -->
+
+
+<div class="login-box">
+    <h2>ADMIN LOGIN</h2>
+    <form  (ngSubmit)="adminloginValidate()" >
+      <div class="user-box">
+        <input type="text" name="email"  [(ngModel)]="email" required>
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" type="password"  name="password"  [(ngModel)]="password">
+        <label>Password</label>
+      </div>
+      <input type="submit" value="Login" >
+      
+      <br>
+  
+      <button routerLink="/home" ><i class="fa-solid fa-arrow-left fa-lg"></i></button>
+        
+    </form>
+  </div>

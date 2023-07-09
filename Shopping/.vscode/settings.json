@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/a5656f04-f265-481c-8c09-c44a38b65cd5/resourceGroups/RG_AMLAnubhav/providers/Microsoft.Web/sites/anubhav-webapp",
+    "appService.deploySubpath": "src"
+}

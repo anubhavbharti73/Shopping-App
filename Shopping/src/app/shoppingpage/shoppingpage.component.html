@@ -1,0 +1,55 @@
+<h2 style="text-align: center;">Welcome to</h2>
+<h1 style="text-align: center ; color: darkgrey ; border: 20px; border-color: aqua;">Anubhav Ki Dukaan</h1>
+
+
+<div style="background-color: rgb(79, 185, 17) ; border-radius: 1cm;  ">
+    <div style="background-color: black ; text-align: center; height: .2cm; ">  </div>
+
+
+    <button (click)="myCart()">My Cart</button>
+    <button (click)="itemsList()">All Items</button>
+
+
+
+    <div *ngIf="change">
+        <table class="center" border="2px" width="80%">
+            <thead>
+            <tr>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            </tr>
+            </thead>
+    
+            <tr *ngFor="let i of item">
+        
+            <td>{{i.itemId}}</td>
+            <td>{{i.itemName}}</td>
+            <td>{{i.itemPrice}}</td>
+            <td><button (click)="addToCart(i)">Add To Cart</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div *ngIf="change1">
+        <table class="center" border="2px" width="80%">
+            <thead>
+                <tr>
+                <th>Item ID</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+                </tr>
+            </thead>
+        
+                <tr *ngFor="let fav of cartItems">
+        
+                    <td>{{fav.itemId}}</td>
+                    <td>{{fav.itemName}}</td>
+                    <td>{{fav.itemPrice}}</td>
+                    <td><i (click)="deleteitem(fav)" class="fa-solid fa-trash"></i></td>
+                </tr>
+        
+    </table>
+    </div>
+    
+   

@@ -1,0 +1,48 @@
+<!-- <p style="text-align: center;">User Login</p>
+
+<form #regForm="ngForm" (ngSubmit)="userloginValidate(regForm)" >
+    
+    <table align="center"> 
+                        
+        <tr > 
+        <td align="left" class="form-label"> Email :</td> 
+        <td align="left"><input type="text"  name="email"  [(ngModel)]="userAuth.emailid" required> </td>
+        </tr>
+        <br>
+        <tr> 
+            <td align="left" class="form-label" > Password :  </td> 
+            <td align="left"><input type="password"  name="password"  [(ngModel)]="userAuth.password"> </td>
+            </tr>
+            <input type="submit" value="Login" >
+            <br>
+            <p>Not yet Registered???</p><u><p style="color: blue;" routerLink="/registeration">Register Here!!</p></u>
+        </table>
+    <br>
+    <button routerLink="/home">Back</button>
+
+    
+</form> -->
+
+
+<!-- ----------------------------------------------------- -->
+
+<div class="login-box">
+    <h2>USER LOGIN</h2>
+    <form #regForm="ngForm" (ngSubmit)="userloginValidate(regForm)" >
+      <div class="user-box">
+        <input type="text" name="" name="email"  [(ngModel)]="userAuth.emailid" required>
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password"  [(ngModel)]="userAuth.password">
+        <label>Password</label>
+      </div>
+      
+      <input class="magic-button" type="submit" value="Login" >
+
+      <p>Not yet Registered???</p><u><p style="color: blue;" routerLink="/registeration">Register Here!!</p></u>
+
+      <button routerLink="/home">Back</button>
+
+    </form>
+  </div>
