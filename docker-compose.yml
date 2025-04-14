@@ -13,7 +13,7 @@ services:
     build:
       context: ./ShopCartH2
       dockerfile: Dockerfile
-    image: anubhav730/app1:latest
+    image: anubhav730/app2:latest
     container_name: Cart
     ports:
       - "1235:1235"
@@ -21,15 +21,16 @@ services:
     build:
       context: ./ShopItemH2
       dockerfile: Dockerfile
-    image: anubhav730/app1:latest
+    image: anubhav730/app3:latest
     container_name: Item
     ports:
       - "1236:1236"
   app4:
     build:
       context: ./Shopping
-      docker_file: Dockerfile
-    image: anubhav730/app1:latest
+      dockerfile: Dockerfile
+    image: anubhav730/app4:latest
     container_name: Frontend
     ports:
       - "4200:4200"
+
