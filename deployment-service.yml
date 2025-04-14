@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         app: shop
-      name: ShopPod
+      name: shoppod
     spec:
       containers:
         - name: user
