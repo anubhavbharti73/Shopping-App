@@ -1,0 +1,55 @@
+kind: Deployement
+apiVersion: apps/v1
+metadata:
+  name: ShopDeploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: Shop
+  template:
+    metadata:
+      labels:
+        app: Shop
+      name: ShopPod
+    spec:
+      containers:
+        - name: User
+          image: anubhav730/app1:lastest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - container_port: 1234
+
+        - name: Cart
+          image: anubhav730/app2:lastest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - container_port: 1235
+
+        - name: Items
+          image: anubhav730/app3:lastest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - container_port: 1236
+
+        - name: Frontend
+          image: anubhav730/app4:lastest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - container_port: 4200
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: shopSVC
+spec:
+  selector:
+    app: Shop
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 9090
+  type: NodePort
+
