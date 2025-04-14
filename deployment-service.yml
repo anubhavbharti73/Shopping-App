@@ -1,4 +1,4 @@
-kind: Deployement
+kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: shopdeploy
@@ -18,25 +18,25 @@ spec:
           image: anubhav730/app1:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - container_port: 1234
+            - containerPort: 1234
 
         - name: cart
           image: anubhav730/app2:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - container_port: 1235
+            - containerPort: 1235
 
         - name: items
           image: anubhav730/app3:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - container_port: 1236
+            - containerPort: 1236
 
         - name: frontend
           image: anubhav730/app4:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - container_port: 4200
+            - containerPort: 4200
 
 ---
 
